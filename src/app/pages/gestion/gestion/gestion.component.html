@@ -1,0 +1,12 @@
+<div class="gestion">
+    <div class="gestion__productform">
+        <app-product-form (newProduct)="fillForm($event)"></app-product-form>
+    </div>
+    <div class="gestion__productview">
+        <span>Product preview:</span>
+        <div class="gestion__productwrap">
+            <app-product [product]="product" [showBtn]="showBtn"></app-product>
+        </div>
+    </div>
+</div>
+

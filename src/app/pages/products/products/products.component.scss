@@ -1,0 +1,63 @@
+.loader{
+    display: flex;
+    justify-content:center
+}
+.products{
+    padding:0 20px;
+}
+.grid-view{
+    display:grid;
+    grid-gap:40px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.list-view{
+    display:flex;
+    flex-direction:column;
+}
+.grid{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    margin: 20px 0 30px 0;
+    h2{
+        font-size:1.3rem;
+        font-weight: 800;
+    }
+    &__btn{
+        height:40px;
+        background-color:white;
+        border:none;
+        padding:5px 20px;
+        border:1px solid #f2f2f2;
+        cursor: pointer;
+    }
+}
+.btnGridActive{
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 5px
+}
+.btnGridInactive{
+    background:#e8e8e8;
+    border-radius: 5px;
+}
+.find{
+    display: flex;
+    justify-content:flex-end;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1400px){
+    .grid-view{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 768px){
+    .grid-view{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 550px){
+    .grid-view{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

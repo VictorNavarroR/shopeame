@@ -3,9 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
-
+  production: false,
+  //baseApiUrl: "https://my-json-server.typicode.com/franlindebl/shopeame-api-v2/"
+  baseApiUrl: "https://621debd3849220b1fc89826f.mockapi.io/api/v1/"
+}
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

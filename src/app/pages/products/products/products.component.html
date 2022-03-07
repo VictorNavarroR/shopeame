@@ -1,0 +1,25 @@
+<div class="loader" *ngIf="loader">
+    <img [src]="loadingImage" alt="Loagind...">
+</div>
+
+<div *ngIf="!loader" class="grid">
+    <h2>Listado de productos ({{ productsCount }})</h2>
+    <div class="grid__views">
+        <button class="grid__btn" [ngClass]="gridOrList === 'list-view' ? 'btnGridActive' : 'btnGridInactive'" (click)="changeView('list-view')">
+            <img [src]="listBtnImg" alt="List view">
+        </button>
+        <button class="grid__btn" [ngClass]="gridOrList === 'grid-view' ? 'btnGridActive' : 'btnGridInactive'" (click)="changeView('grid-view')">
+            <img [src]="gridBtnImg" alt="Grid view">
+        </button>
+    </div>
+</div>
+<div class="find">
+    <input type="text" [(ngModel)]="filterProducts" placeholder="Buscar producto">
+</div>
+<div *ngIf="products" class="products" [ngClass]="gridOrList">
+    <app-product
+    *ngFor="let product of (products | filterProduct:filterProducts)"
+    [product]="product"
+    [gridStyle]="gridOrList"
+    ></app-product>
+</div>

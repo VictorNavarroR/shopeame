@@ -1,0 +1,30 @@
+.form{
+    display: flex;
+    flex-direction:column;
+    padding: 0 130px 0 40px;
+    .field-container{
+        width: 100%;
+        .form__input{
+            width: 100%;
+            margin:20px 0;
+            padding: 3px;
+            font-size:.9rem;
+        }
+    }
+    &__button{
+        align-self: flex-end;
+        background-color: var(--main-color);
+        color:white;
+        border:none;
+        border-radius:5px;
+        padding: 5px 8px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover{
+            background-color: var(--gray-color);
+        }
+        &:disabled{
+            background-color: #ccc;
+        }
+    }
+}

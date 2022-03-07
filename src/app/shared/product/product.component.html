@@ -1,0 +1,20 @@
+<div
+    *ngIf="product"
+    class="product"
+    [ngClass]="gridStyle"
+>
+<div class="product__img">
+    <img *ngIf="product.image" [src]="product.image" alt="Product {{ product.name }}">
+</div>
+<div class="product__content">
+    <h4>{{ product.name }}</h4>
+    <p>{{ product.description }}</p>
+    <h3>{{ product.price | currency }}</h3>
+    <div class="product__options">
+        <div class="product__stars">
+            <star-rating *ngIf="product.stars" [value]="product.stars || 0" [totalstars]="5" checkedcolor="gold" uncheckedcolor="#F7F0D6" size="24px" [readonly]="false"></star-rating>
+        </div>
+        <button *ngIf="showBtn !== false" (click)="gotoGestion(product)" class="product__btn">Editar</button>
+    </div>
+</div> 
+</div>
