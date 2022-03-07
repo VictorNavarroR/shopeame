@@ -1,0 +1,8 @@
+<header class="header">
+    <div class="header__logo">
+        <img [src]="headerLogo" alt="Logo Shopéame">
+    </div>
+    <nav class="header__nav">
+            <a *ngFor="let links of headerNavLinks" class="header__link {{links.class}}" [routerLink]="links.routerLink"  routerLinkActive="active-link">{{links.name}}</a>
+    </nav>
+</header>

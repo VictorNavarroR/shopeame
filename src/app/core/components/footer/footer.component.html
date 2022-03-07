@@ -1,0 +1,13 @@
+<footer class="footer">
+    <div class="footer__follow">
+        Síguenos en:
+    </div>
+    <div class="footer__social">
+        <ul class="footer__ul">
+            <li class="footer__li" *ngFor="let red of footerLinks">
+                <a class="footer__link"[href]="red.url" target="_blank" rel="noopener">{{ red.name }}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__credits">Copyright Shopéame © 2020</div>
+</footer>
